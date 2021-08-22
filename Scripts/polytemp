@@ -1,0 +1,5 @@
+#!/bin/bash
+# Simple script to show the cpu temp formatted to be shown in polybar
+# echo "WIP"
+temp=$(sensors | grep "Tdie" | sed "s/Tdie: *+//;s/Â°C *//")
+echo "$temp"
